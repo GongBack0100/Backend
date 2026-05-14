@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d830c557vvec73c23l60-a.singapore-postgres.render.com:5432/ideathon_h2sc
+    driver-class-name: org.postgresql.Driver
+    username: ideathon
+    password: vXaZqkm6h3vhRGVqG3QR71RM8pcrJflX
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: 4q7wHXdS9kFqZrTv2mJpLnByG8cQaEiUoYhPxWsA1dN6MjKl5eR0bVuCfO3gXtz
+  expiration: 86400000
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.gongback: DEBUG
+
+openai:
+  api-key: ${OPENAI_API_KEY:}
+  model: gpt-4o-mini
+  base-url: https://api.openai.com
